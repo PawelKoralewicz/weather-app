@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-size: 21px;
+  font-family: "Comfortaa", cursive;
+  background: url("./images/new-york.jpg");
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  mix-blend-mode: overlay;
+  color: rgb(255, 255, 255);
+}
+
+.form-container {
+  position: absolute;
+  background-color: rgba(52, 70, 78, 0.4);
+  backdrop-filter: blur(2px);
+  min-height: 100vh;
+  width: 30vw;
+  min-width: 300px;
+  right: 0;
+  top: 0;
+}
+
+.city-form {
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  display: grid;
+  column-gap: 5px;
+}
+
+.search-button {
+  background-color: #ff8400;
+  color: rgb(255, 255, 255);
+  border: none;
+  height: 50px;
+  width: 20%;
+  max-width: 50px;
+  margin-left: 10px;
+  position: absolute;
+  justify-content: flex-end;
+  right: 0;
+  top: 0;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.city-input {
+  padding: 12px;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0;
+  width: 80%;
+  position: absolute;
+  border: none;
+  border-bottom: 2px solid rgb(112, 110, 110);
+  color: rgb(232, 223, 223);
+  background: none;
+  cursor: text;
+  outline: none;
+}
+
+.search-label {
+  position: absolute;
+  transform: translateY(50%);
+  left: 25px;
+  transition: left 0.3s ease-in-out, opacity 0.3s;
+  opacity: 1;
+  cursor: inherit;
+  color: rgb(232, 223, 223);
+}
+
+@media screen and (min-width: 70vw) {
+  .city-input {
+    transform: translateX(5%);
+  }
+}
+
+.search-button:hover {
+  color: #ff8400;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #ff8400;
+}
+
+.input-container:hover label {
+  left: 35px;
+}
+
+.city-input:focus + .search-label,
+.city-input:not(:placeholder-shown) + .search-label {
+  opacity: 0;
+  left: 50px;
+}
+
+.city-input:-webkit-autofill,
+.city-input:-webkit-autofill:hover,
+.city-input:-webkit-autofill:focus,
+.city-input:-webkit-autofill:active {
+  transition: background-color 10000s ease-in-out 0s;
+}
+
+.data-list{
+  display: grid;
+  position: absolute;
+  bottom: 5vh;
+  left: 5%;
+  padding: 0;
+  row-gap: 50px;
+  mix-blend-mode: hard-light;
+  color:#e4dfd9;
+  font-size: 32px;
+  list-style: none;
+}
+
+#pressure-icon,
+#wind-icon,
+#humidity-icon{
+  transform: translateY(5px);
+}
+
+.weather-data{
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  columns: 3;
+  bottom: 5vh;
+  position: absolute;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.temp {
+  font-size: 32px;
+  color:rgb(255, 255, 255);
+  transform: translateY(30%);
+
+}
+
+.local-time{
+  font-size: 32px;
+  color:rgb(255, 255, 255);
+  transform: translateY(30%);
+}
+
+.clock-icon{
+  transform: translateX(25%);
+}
+
+.description{
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  transform: translateX(100%);
+}

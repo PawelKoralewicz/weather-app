@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Weather app</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"/>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1 class="city-name">
+            New
+            <br/>
+            York
+        </h1>
+        <ul class="weather-data">
+            <li><img src="icons/thermometer.png" alt="temperatura" class="temp-icon"></li>
+            <li class="temp">17°C</li>
+		<li class="description">słonecznie</li>
+            <li><img src="http://openweathermap.org/img/wn/01d@2x.png" alt="zachmurzenie" class="weather-icon"></li>
+		<li><img src="icons/clock-icon.png" alt="godzina" class="clock-icon"></li>
+        	<li class="local-time">16:30</li>
+	  </ul>
+	<div class="form-container">
+	  <from class="city-form">
+          <div class="input-container">
+            <input type="text" class="city-input" id="city" placeholder=" "/>
+            <label for="city" class="search-label" id="labl">Wyszukaj miasto...</label>
+          </div>
+          <button type="submit" class="search-button">
+            <i class="fa fa-search"></i>
+          </button>
+	  </from>
+	 <ul class="data-list">
+    	   <li><img id="wind-icon" src="icons/wind-icon.png">
+        Wiatr:
+          <span class="wind-speed">1.2 km/h</span>
+    	   </li>
+    	   <li><img src="icons/humidity-icon.png" id="humidity-icon">
+           Wilgotność:
+           <span class="humidity">21%</span>
+    	   </li>
+    	   <li><img src="icons/pressure-icon.png" id="pressure-icon">
+          Ciśnienie:<span class="pressure">
+            1024 hPa</span>
+    	   </li>
+	 </ul>
+	</div>	
+    <script src="script.js"></script>
+  </body>
+</html>
